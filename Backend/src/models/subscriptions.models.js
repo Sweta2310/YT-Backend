@@ -8,7 +8,11 @@ const subscriptionSchema = new Schema({
     channel:{
         type: Schema.Types.ObjectId,// subscribing to a channel
         ref: "User",
-    }
+    },
+    isSubscribed: {
+        type: Boolean,
+        default: true, // Default to true when a subscription is created
+    },
 },{
     timestamps: true,
 })
